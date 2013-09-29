@@ -1,0 +1,21 @@
+1. Shortcut : 
+  CMD + N(New File), CMD + SHIFT + N(New Project), CMD + W(Close Window)
+  CMD + [ (左缩进), CMD + CTRL + LEFT(折叠) CMD + CTRL + TOP(折叠全部函数) CMD + /(注释或取消注释)
+  CTRL+k (delete line), Ctrl + A (go to line ahead), Ctrl + E (go to line end)
+  CTRL + .(Tip), ESC(Tip), CMD + CTRL + ? (Help),
+  CMD + \ (set breakpoint), CMD + B (Compile), CMD + R (Run)， Fn ＋ F6 (step over)
+  Control + Option + Command +3 (Show Object Library)  Option + Command + 5 (Show Size Inspector)
+
+1. App Icon, Launch Image
+  iPhone 
+    Home Icon 57*57 Icon.png  114*114 Icon@2X.png 120*120 Icon7.png
+    Setting/Spotlight Icon 29*29 Icon-Small.png  58*58 Icon-small@2X.png 80*80 Icon-small7@2X.png
+    Splash : 320*480 Default.png  640*960 (Default@2X.png)    640*1136 (Default-568h@2X.png)
+  iPad 
+    iTunes Show Photo : 512*512  1024*1024
+    Home Icon : 72*72 Icon-72.png  144*144 Icon-72@2X.png 152*152 Icon-76@2X.png
+    Setting/Spotlight Icon 50*50(Icon-Small-50.png) 100*100(Icon-Small-50@2Xpng)
+    Splash  768*1024 Default-Portrait.png  1536*2048 Default-Portrait@2X.png（ipad3, ipad4）
+
+2. NSStringFromClass([JpAppDelegate class])
+
