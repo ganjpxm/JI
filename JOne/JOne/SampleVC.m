@@ -9,7 +9,8 @@
 #import "SampleVC.h"
 #import "JpOc.h"
 #import "FormVC.h"
-#import "SimpleTableVC.h"
+#import "PropertyListTableVC.h"
+#import "CollectionVC.h"
 
 @interface SampleVC ()
 
@@ -26,7 +27,7 @@
     
     self.codes = [[NSMutableArray alloc] initWithObjects:@"Objective-C", @"UI", nil];
     self.xibs = [[NSMutableArray alloc] initWithObjects:@"Table View",@"Collection View", nil];
-    self.storyboards = [[NSMutableArray alloc] initWithObjects:@"Form",@"Simple Table View", nil];
+    self.storyboards = [[NSMutableArray alloc] initWithObjects:@"Form",@"Property List Table",@"Core Data Table",@"Collection View",@"Tab Bar : Web View", nil];
     
     self.titles = [[NSMutableArray alloc] initWithObjects:@"Code",@"Xib",@"Storyboard", nil];
 }
@@ -49,6 +50,11 @@
 }
 
 //-------------------------------------- TableView ---------------------------------
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [titles count];
+}
+
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     switch(section)
@@ -65,11 +71,6 @@
     }
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [titles count];
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch(section)
@@ -80,7 +81,7 @@
             return [xibs count];
         case 2:
             return [storyboards count];
-            
+
         default:
             return 0;
     }
@@ -127,16 +128,24 @@
         [JpOc testOc];
     } else if( indexPath.section == 1 ) {
         itemNameSel = [xibs objectAtIndex:indexPath.row];
-        
     } else if( indexPath.section == 2 ) {
         itemNameSel = [storyboards objectAtIndex:indexPath.row];
         UIStoryboard *storyboard = self.storyboard;
         if ([itemNameSel isEqualToString:@"Form"]){
             FormVC *formVC = [storyboard instantiateViewControllerWithIdentifier:@"FormVC"];
             [self.navigationController pushViewController:formVC  animated:YES];
-        } else if ([itemNameSel isEqualToString:@"Simple Table View"]){
-            SimpleTableVC *simpleTableVC = [storyboard instantiateViewControllerWithIdentifier:@"SimpleTableVC"];
+        } else if ([itemNameSel isEqualToString:@"Property List Table"]){
+            UIViewController *simpleTableVC = [storyboard instantiateViewControllerWithIdentifier:@"PropertyListTableVC"];
             [self.navigationController pushViewController:simpleTableVC  animated:YES];
+        } else if ([itemNameSel isEqualToString:@"Core Data Table"]) {
+            UITabBarController *coreDataTableVC = [storyboard instantiateViewControllerWithIdentifier:@"CoreDataTableVC"];
+            [self.navigationController pushViewController:coreDataTableVC  animated:YES];
+        } else if ([itemNameSel isEqualToString:@"Tab Bar : Web View"]) {
+            UITabBarController *tabBarVC = [storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
+            [self.navigationController pushViewController:tabBarVC  animated:YES];
+        } else if ([itemNameSel isEqualToString:@"Collection View"]) {
+            CollectionVC *collectionVC = [storyboard instantiateViewControllerWithIdentifier:@"CollectionVC"];
+            [self.navigationController pushViewController:collectionVC  animated:YES];
         }
     }
 }

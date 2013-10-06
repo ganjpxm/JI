@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RecipeName</key>
+	<array>
+		<string>Egg Benedict</string>
+		<string>Mushroom Risotto</string>
+		<string>Full Breakfast</string>
+		<string>Hamburger</string>
+		<string>Ham and Egg Sandwich</string>
+		<string>Creme Brelee</string>
+		<string>White Chocolate Donut</string>
+		<string>Starbucks Coffee</string>
+		<string>Vegetable Curry</string>
+		<string>Instant Noodle with Egg</string>
+		<string>Noodle with BBQ Pork</string>
+        <string>Japanese Noodle with Pork</string>
+        <string>Green Tea</string>
+        <string>Thai Shrimp Cake</string>
+        <string>Angry Birds Cake</string>
+        <string>Ham and Cheese Panini</string>
+	</array>
+	<key>Thumbnail</key>
+	<array>
+        <string>egg_benedict</string>
+        <string>mushroom_risotto</string>
+        <string>full_breakfast</string>
+        <string>hamburger</string>
+        <string>ham_and_egg_sandwich</string>
+        <string>creme_brelee</string>
+        <string>white_chocolate_donut</string>
+        <string>starbucks_coffee</string>
+        <string>vegetable_curry</string>
+        <string>instant_noodle_with_egg</string>
+        <string>noodle_with_bbq_pork</string>
+        <string>japanese_noodle_with_pork</string>
+        <string>green_tea</string>
+        <string>thai_shrimp_cake</string>
+        <string>angry_birds_cake</string>
+        <string>ham_and_cheese_panini</string>
+    </array>
+	<key>PrepTime</key>
+	<array>
+        <string>30 min</string>
+        <string>30 min</string>
+        <string>20 min</string>
+        <string>30 min</string>
+        <string>10 min</string>
+        <string>1 hour</string>
+        <string>45 min</string>
+        <string>5 min</string>
+        <string>30 min</string>
+        <string>8 min</string>
+        <string>20 min</string>
+        <string>20 min</string>
+        <string>5 min</string>
+        <string>1.5 hour</string>
+        <string>4 hours</string>
+        <string>10 min</string>
+    </array>
+</dict>
+</plist>

@@ -9,7 +9,6 @@
 #import "Calculator.h"
 
 @implementation Calculator
-
 {
     double accmulator;
 }

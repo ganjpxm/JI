@@ -10,7 +10,7 @@
 #import "Calculator.h"
 
 #pragma mark -
-#pragma mark testOc(private)
+#pragma mark jpOc(private)
 @interface JpOc(private)
 - (void)privateMethod;
 @end
@@ -139,4 +139,24 @@ NSString *staticStr;
 {
     NSLog(@"%@ is my favorite actor in the movie %@, I saw it %i times.",actorName, value, times);
 }
+
+// [self performSelector:@selector(testFun)];
+-(void)testFun
+{
+    NSLog(@"testFun");
+}
+
+//[self performSelector:@selector(testFun:) withObjects:@"jack"];
+//[self performSelector:@selector(testFun:)   withObjects:@"jack" afterDelay:5];
+-(void)testFun:(NSString*)name
+{
+    NSLog(@"name:%@",name);
+}
+
+//[self performSelector:@selector(testFun:Addr:)   withObjects:@"jack" withObjects:@"east road"];
+-(void)testFun:(NSString*)name Addr:(NSString*)addr
+{
+    NSLog(@"name:%@ Addr:%@",name,addr);
+}
+
 @end

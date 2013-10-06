@@ -50,7 +50,7 @@
 		<string>MKDirectionsModeTrain</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
-	<string>Sample_iPhone</string>
+	<string>Sample-iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>Sample_iPad</string>
 	<key>UIRequiredDeviceCapabilities</key>

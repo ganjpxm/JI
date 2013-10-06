@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FormVC : UIViewController
+@interface FormVC : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIView *nameLbl;
-@property (weak, nonatomic) IBOutlet UITextField *nameTf;
+@property (weak, nonatomic) IBOutlet UILabel *lableUi;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldUi;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControlUi;
+@property (weak, nonatomic) IBOutlet UISlider *sliderUi;
+@property (weak, nonatomic) IBOutlet UISwitch *switchUi;
+@property (weak, nonatomic) IBOutlet UIStepper *stepperUi;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressViewUi;
+@property (weak, nonatomic) IBOutlet UITextView *textViewUi;
+
 @property (strong, nonatomic) NSString *itemName;
+@property (strong) NSManagedObject *formInfo;
 
+- (IBAction)onCancel:(id)sender;
+- (IBAction)onSave:(id)sender;
 @end
