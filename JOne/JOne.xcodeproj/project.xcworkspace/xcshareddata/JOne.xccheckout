@@ -39,7 +39,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>
 			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>trunk/JOne</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>4779D1C2-9288-420D-8C1B-18940954CD01</string>
 			<key>IDESourceControlWCCName</key>
