@@ -7,42 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		654D474018005FED00FE9757 /* FormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C21A4417F5D04F007E7E03 /* FormVC.m */; };
-		6557657D1800EDE8004B884B /* CoreDataTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6557657C1800EDE8004B884B /* CoreDataTableVC.m */; };
-		655765831800FEF5004B884B /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 655765821800FEF5004B884B /* CollectionVC.m */; };
-		65576586180193D6004B884B /* CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65576585180193D6004B884B /* CollectionHeaderView.m */; };
-		6557658918019951004B884B /* CollectionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6557658818019951004B884B /* CollectionDetailVC.m */; };
 		6557658B1801B7F2004B884B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6557658A1801B7F2004B884B /* Social.framework */; };
-		6580943717F7CF310002F164 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580943617F7CF310002F164 /* Calculator.m */; };
-		6580943D17F812480002F164 /* PropertyListTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580943C17F812480002F164 /* PropertyListTableVC.m */; };
 		658ECD2917F3F321007B02A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2817F3F321007B02A6 /* Foundation.framework */; };
 		658ECD2B17F3F321007B02A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2A17F3F321007B02A6 /* CoreGraphics.framework */; };
 		658ECD2D17F3F321007B02A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2C17F3F321007B02A6 /* UIKit.framework */; };
 		658ECD3317F3F321007B02A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 658ECD3117F3F321007B02A6 /* InfoPlist.strings */; };
 		658ECD3517F3F321007B02A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 658ECD3417F3F321007B02A6 /* main.m */; };
 		658ECD3917F3F321007B02A6 /* JpAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 658ECD3817F3F321007B02A6 /* JpAppDelegate.m */; };
-		658ECD4217F3F321007B02A6 /* SampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 658ECD4117F3F321007B02A6 /* SampleVC.m */; };
 		658ECD4417F3F321007B02A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658ECD4317F3F321007B02A6 /* Images.xcassets */; };
 		658ECD4B17F3F321007B02A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD4A17F3F321007B02A6 /* XCTest.framework */; };
 		658ECD4C17F3F321007B02A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2817F3F321007B02A6 /* Foundation.framework */; };
 		658ECD4D17F3F321007B02A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2C17F3F321007B02A6 /* UIKit.framework */; };
 		658ECD5517F3F321007B02A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 658ECD5317F3F321007B02A6 /* InfoPlist.strings */; };
-		65995E3317FF8E65003054B6 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65995E3217FF8E65003054B6 /* recipes.plist */; };
-		659E15DA180D0E7700F2CEB9 /* JqueryMobileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15D9180D0E7700F2CEB9 /* JqueryMobileVC.m */; };
 		659E15DD180D0F7D00F2CEB9 /* JqueryMobile in Resources */ = {isa = PBXBuildFile; fileRef = 659E15DC180D0F7D00F2CEB9 /* JqueryMobile */; };
 		659E15E2180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 659E15E0180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt */; };
 		659E15E3180D64BD00F2CEB9 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15E1180D64BD00F2CEB9 /* WebViewJavascriptBridge.m */; };
 		659E15E6180D64D300F2CEB9 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15E5180D64D300F2CEB9 /* ViewPagerController.m */; };
 		659E15E8180D686200F2CEB9 /* Web.html in Resources */ = {isa = PBXBuildFile; fileRef = 659E15E7180D686200F2CEB9 /* Web.html */; };
-		65C21A4217F5CA08007E7E03 /* JpOc.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C21A4117F5CA08007E7E03 /* JpOc.m */; };
-		65C21A4517F5D04F007E7E03 /* FormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C21A4417F5D04F007E7E03 /* FormVC.m */; };
-		65C7BA8E17FF02DB00264D2E /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BA8D17FF02DB00264D2E /* SimpleTableCell.m */; };
-		65C7BA9217FF03EC00264D2E /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C7BA9117FF03EC00264D2E /* SimpleTableCell.xib */; };
+		659E15F8180D987F00F2CEB9 /* CollectionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15EA180D987F00F2CEB9 /* CollectionDetailVC.m */; };
+		659E15F9180D987F00F2CEB9 /* CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15EC180D987F00F2CEB9 /* CollectionHeaderView.m */; };
+		659E15FA180D987F00F2CEB9 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15EE180D987F00F2CEB9 /* CollectionVC.m */; };
+		659E15FB180D987F00F2CEB9 /* CoreDataTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15F0180D987F00F2CEB9 /* CoreDataTableVC.m */; };
+		659E15FC180D987F00F2CEB9 /* FormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15F2180D987F00F2CEB9 /* FormVC.m */; };
+		659E15FD180D987F00F2CEB9 /* PropertyListTableDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15F4180D987F00F2CEB9 /* PropertyListTableDetailVC.m */; };
+		659E15FE180D987F00F2CEB9 /* PropertyListTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15F6180D987F00F2CEB9 /* PropertyListTableVC.m */; };
+		659E1600180D98A900F2CEB9 /* SampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15FF180D98A900F2CEB9 /* SampleVC.m */; };
+		659E1603180D98F100F2CEB9 /* JqueryMobileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E1602180D98F100F2CEB9 /* JqueryMobileVC.m */; };
+		659E1607180D996A00F2CEB9 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E1605180D996A00F2CEB9 /* SimpleTableCell.m */; };
+		659E1608180D996A00F2CEB9 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659E1606180D996A00F2CEB9 /* SimpleTableCell.xib */; };
+		659E160B180D99C200F2CEB9 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E160A180D99C200F2CEB9 /* Calculator.m */; };
+		659E160E180D99CD00F2CEB9 /* JpOc.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E160D180D99CD00F2CEB9 /* JpOc.m */; };
+		659E1612180D9F9300F2CEB9 /* JOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 659E160F180D9F9300F2CEB9 /* JOne.xcdatamodeld */; };
+		659E1613180D9F9300F2CEB9 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 659E1611180D9F9300F2CEB9 /* recipes.plist */; };
 		65E4B48117F40B97007A5075 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4B48017F40B97007A5075 /* AudioToolbox.framework */; };
 		65E4B48317F40C00007A5075 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4B48217F40C00007A5075 /* MapKit.framework */; };
 		65FA4B9317FFEA240036969E /* WebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FA4B9217FFEA240036969E /* WebViewVC.m */; };
-		65FA4B9D18001E700036969E /* PropertyListTableDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FA4B9C18001E700036969E /* PropertyListTableDetailVC.m */; };
-		65FA4BA1180033B90036969E /* JOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65FA4B9F180033B90036969E /* JOne.xcdatamodeld */; };
 		65FA4BA6180055050036969E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FA4BA5180055050036969E /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,19 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6557657B1800EDE8004B884B /* CoreDataTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableVC.h; sourceTree = "<group>"; };
-		6557657C1800EDE8004B884B /* CoreDataTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableVC.m; sourceTree = "<group>"; };
-		655765811800FEF5004B884B /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
-		655765821800FEF5004B884B /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
-		65576584180193D6004B884B /* CollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderView.h; sourceTree = "<group>"; };
-		65576585180193D6004B884B /* CollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderView.m; sourceTree = "<group>"; };
-		6557658718019951004B884B /* CollectionDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDetailVC.h; sourceTree = "<group>"; };
-		6557658818019951004B884B /* CollectionDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionDetailVC.m; sourceTree = "<group>"; };
 		6557658A1801B7F2004B884B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		6580943517F7CF310002F164 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
-		6580943617F7CF310002F164 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
-		6580943B17F812480002F164 /* PropertyListTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListTableVC.h; sourceTree = "<group>"; };
-		6580943C17F812480002F164 /* PropertyListTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListTableVC.m; sourceTree = "<group>"; };
 		658ECD2517F3F321007B02A6 /* JOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658ECD2817F3F321007B02A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		658ECD2A17F3F321007B02A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,17 +69,12 @@
 		658ECD3817F3F321007B02A6 /* JpAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JpAppDelegate.m; sourceTree = "<group>"; };
 		658ECD3B17F3F321007B02A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Sample-iPhone.storyboard"; sourceTree = "<group>"; };
 		658ECD3E17F3F321007B02A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Sample-iPad.storyboard"; sourceTree = "<group>"; };
-		658ECD4017F3F321007B02A6 /* SampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleVC.h; sourceTree = "<group>"; };
-		658ECD4117F3F321007B02A6 /* SampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleVC.m; sourceTree = "<group>"; };
 		658ECD4317F3F321007B02A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		658ECD4917F3F321007B02A6 /* JOneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JOneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658ECD4A17F3F321007B02A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		658ECD5217F3F321007B02A6 /* JOneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JOneTests-Info.plist"; sourceTree = "<group>"; };
 		658ECD5417F3F321007B02A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		658F81E317F57A6F0090BC05 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		65995E3217FF8E65003054B6 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
-		659E15D8180D0E7700F2CEB9 /* JqueryMobileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JqueryMobileVC.h; path = ../JqueryMobileVC.h; sourceTree = "<group>"; };
-		659E15D9180D0E7700F2CEB9 /* JqueryMobileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JqueryMobileVC.m; path = ../JqueryMobileVC.m; sourceTree = "<group>"; };
 		659E15DC180D0F7D00F2CEB9 /* JqueryMobile */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JqueryMobile; path = Web/JqueryMobile; sourceTree = "<group>"; };
 		659E15DF180D64BC00F2CEB9 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge.h; path = Core/WebViewJavascriptBridge/WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		659E15E0180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WebViewJavascriptBridge.js.txt; path = Core/WebViewJavascriptBridge/WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
@@ -100,22 +82,39 @@
 		659E15E4180D64D300F2CEB9 /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPagerController.h; path = Core/Wideget/ViewPagerController.h; sourceTree = "<group>"; };
 		659E15E5180D64D300F2CEB9 /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewPagerController.m; path = Core/Wideget/ViewPagerController.m; sourceTree = "<group>"; };
 		659E15E7180D686200F2CEB9 /* Web.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Web.html; path = Web/Web.html; sourceTree = "<group>"; };
-		65C21A4017F5CA08007E7E03 /* JpOc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpOc.h; sourceTree = "<group>"; };
-		65C21A4117F5CA08007E7E03 /* JpOc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpOc.m; sourceTree = "<group>"; };
-		65C21A4317F5D04F007E7E03 /* FormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormVC.h; sourceTree = "<group>"; };
-		65C21A4417F5D04F007E7E03 /* FormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormVC.m; sourceTree = "<group>"; };
-		65C7BA8C17FF02DB00264D2E /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
-		65C7BA8D17FF02DB00264D2E /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
-		65C7BA9117FF03EC00264D2E /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		659E15E9180D987F00F2CEB9 /* CollectionDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionDetailVC.h; path = Sample/CollectionDetailVC.h; sourceTree = "<group>"; };
+		659E15EA180D987F00F2CEB9 /* CollectionDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionDetailVC.m; path = Sample/CollectionDetailVC.m; sourceTree = "<group>"; };
+		659E15EB180D987F00F2CEB9 /* CollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionHeaderView.h; path = Sample/CollectionHeaderView.h; sourceTree = "<group>"; };
+		659E15EC180D987F00F2CEB9 /* CollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionHeaderView.m; path = Sample/CollectionHeaderView.m; sourceTree = "<group>"; };
+		659E15ED180D987F00F2CEB9 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionVC.h; path = Sample/CollectionVC.h; sourceTree = "<group>"; };
+		659E15EE180D987F00F2CEB9 /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionVC.m; path = Sample/CollectionVC.m; sourceTree = "<group>"; };
+		659E15EF180D987F00F2CEB9 /* CoreDataTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableVC.h; path = Sample/CoreDataTableVC.h; sourceTree = "<group>"; };
+		659E15F0180D987F00F2CEB9 /* CoreDataTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableVC.m; path = Sample/CoreDataTableVC.m; sourceTree = "<group>"; };
+		659E15F1180D987F00F2CEB9 /* FormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FormVC.h; path = Sample/FormVC.h; sourceTree = "<group>"; };
+		659E15F2180D987F00F2CEB9 /* FormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FormVC.m; path = Sample/FormVC.m; sourceTree = "<group>"; };
+		659E15F3180D987F00F2CEB9 /* PropertyListTableDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyListTableDetailVC.h; path = Sample/PropertyListTableDetailVC.h; sourceTree = "<group>"; };
+		659E15F4180D987F00F2CEB9 /* PropertyListTableDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PropertyListTableDetailVC.m; path = Sample/PropertyListTableDetailVC.m; sourceTree = "<group>"; };
+		659E15F5180D987F00F2CEB9 /* PropertyListTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyListTableVC.h; path = Sample/PropertyListTableVC.h; sourceTree = "<group>"; };
+		659E15F6180D987F00F2CEB9 /* PropertyListTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PropertyListTableVC.m; path = Sample/PropertyListTableVC.m; sourceTree = "<group>"; };
+		659E15F7180D987F00F2CEB9 /* SampleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleVC.h; path = Sample/SampleVC.h; sourceTree = "<group>"; };
+		659E15FF180D98A900F2CEB9 /* SampleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleVC.m; path = Sample/SampleVC.m; sourceTree = "<group>"; };
+		659E1601180D98F100F2CEB9 /* JqueryMobileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JqueryMobileVC.h; path = Sample/JqueryMobileVC.h; sourceTree = "<group>"; };
+		659E1602180D98F100F2CEB9 /* JqueryMobileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JqueryMobileVC.m; path = Sample/JqueryMobileVC.m; sourceTree = "<group>"; };
+		659E1604180D996A00F2CEB9 /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTableCell.h; path = Sample/SimpleTableCell.h; sourceTree = "<group>"; };
+		659E1605180D996A00F2CEB9 /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTableCell.m; path = Sample/SimpleTableCell.m; sourceTree = "<group>"; };
+		659E1606180D996A00F2CEB9 /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleTableCell.xib; path = Sample/SimpleTableCell.xib; sourceTree = "<group>"; };
+		659E1609180D99C200F2CEB9 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calculator.h; path = Sample/Calculator.h; sourceTree = "<group>"; };
+		659E160A180D99C200F2CEB9 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Calculator.m; path = Sample/Calculator.m; sourceTree = "<group>"; };
+		659E160C180D99CD00F2CEB9 /* JpOc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JpOc.h; path = Sample/JpOc.h; sourceTree = "<group>"; };
+		659E160D180D99CD00F2CEB9 /* JpOc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JpOc.m; path = Sample/JpOc.m; sourceTree = "<group>"; };
+		659E1610180D9F9300F2CEB9 /* JOne.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JOne.xcdatamodel; sourceTree = "<group>"; };
+		659E1611180D9F9300F2CEB9 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = recipes.plist; path = Data/recipes.plist; sourceTree = "<group>"; };
 		65E4B47D17F3FA24007A5075 /* Note */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Note; sourceTree = "<group>"; };
 		65E4B47F17F40B97007A5075 /* JOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = JOne.entitlements; sourceTree = "<group>"; };
 		65E4B48017F40B97007A5075 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		65E4B48217F40C00007A5075 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		65FA4B9117FFEA240036969E /* WebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewVC.h; sourceTree = "<group>"; };
 		65FA4B9217FFEA240036969E /* WebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewVC.m; sourceTree = "<group>"; };
-		65FA4B9B18001E700036969E /* PropertyListTableDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListTableDetailVC.h; sourceTree = "<group>"; };
-		65FA4B9C18001E700036969E /* PropertyListTableDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListTableDetailVC.m; sourceTree = "<group>"; };
-		65FA4BA0180033B90036969E /* JOne.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JOne.xcdatamodel; sourceTree = "<group>"; };
 		65FA4BA5180055050036969E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -266,9 +265,9 @@
 		658F81EB17F57CE40090BC05 /* UiXib */ = {
 			isa = PBXGroup;
 			children = (
-				65C7BA9117FF03EC00264D2E /* SimpleTableCell.xib */,
-				65C7BA8C17FF02DB00264D2E /* SimpleTableCell.h */,
-				65C7BA8D17FF02DB00264D2E /* SimpleTableCell.m */,
+				659E1604180D996A00F2CEB9 /* SimpleTableCell.h */,
+				659E1605180D996A00F2CEB9 /* SimpleTableCell.m */,
+				659E1606180D996A00F2CEB9 /* SimpleTableCell.xib */,
 			);
 			name = UiXib;
 			sourceTree = "<group>";
@@ -276,24 +275,24 @@
 		658F81EC17F57CF50090BC05 /* UiStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				658ECD4017F3F321007B02A6 /* SampleVC.h */,
-				658ECD4117F3F321007B02A6 /* SampleVC.m */,
+				659E15F7180D987F00F2CEB9 /* SampleVC.h */,
+				659E15FF180D98A900F2CEB9 /* SampleVC.m */,
 				658ECD3A17F3F321007B02A6 /* Sample-iPhone.storyboard */,
 				658ECD3D17F3F321007B02A6 /* Sample-iPad.storyboard */,
-				65C21A4317F5D04F007E7E03 /* FormVC.h */,
-				65C21A4417F5D04F007E7E03 /* FormVC.m */,
-				6580943B17F812480002F164 /* PropertyListTableVC.h */,
-				6580943C17F812480002F164 /* PropertyListTableVC.m */,
-				65FA4B9B18001E700036969E /* PropertyListTableDetailVC.h */,
-				65FA4B9C18001E700036969E /* PropertyListTableDetailVC.m */,
-				6557657B1800EDE8004B884B /* CoreDataTableVC.h */,
-				6557657C1800EDE8004B884B /* CoreDataTableVC.m */,
-				655765811800FEF5004B884B /* CollectionVC.h */,
-				655765821800FEF5004B884B /* CollectionVC.m */,
-				6557658718019951004B884B /* CollectionDetailVC.h */,
-				6557658818019951004B884B /* CollectionDetailVC.m */,
-				65576584180193D6004B884B /* CollectionHeaderView.h */,
-				65576585180193D6004B884B /* CollectionHeaderView.m */,
+				659E15E9180D987F00F2CEB9 /* CollectionDetailVC.h */,
+				659E15EA180D987F00F2CEB9 /* CollectionDetailVC.m */,
+				659E15EB180D987F00F2CEB9 /* CollectionHeaderView.h */,
+				659E15EC180D987F00F2CEB9 /* CollectionHeaderView.m */,
+				659E15ED180D987F00F2CEB9 /* CollectionVC.h */,
+				659E15EE180D987F00F2CEB9 /* CollectionVC.m */,
+				659E15EF180D987F00F2CEB9 /* CoreDataTableVC.h */,
+				659E15F0180D987F00F2CEB9 /* CoreDataTableVC.m */,
+				659E15F1180D987F00F2CEB9 /* FormVC.h */,
+				659E15F2180D987F00F2CEB9 /* FormVC.m */,
+				659E15F3180D987F00F2CEB9 /* PropertyListTableDetailVC.h */,
+				659E15F4180D987F00F2CEB9 /* PropertyListTableDetailVC.m */,
+				659E15F5180D987F00F2CEB9 /* PropertyListTableVC.h */,
+				659E15F6180D987F00F2CEB9 /* PropertyListTableVC.m */,
 			);
 			name = UiStoryboard;
 			sourceTree = "<group>";
@@ -304,9 +303,9 @@
 				659E15DC180D0F7D00F2CEB9 /* JqueryMobile */,
 				65FA4B9117FFEA240036969E /* WebViewVC.h */,
 				65FA4B9217FFEA240036969E /* WebViewVC.m */,
+				659E1601180D98F100F2CEB9 /* JqueryMobileVC.h */,
+				659E1602180D98F100F2CEB9 /* JqueryMobileVC.m */,
 				659E15E7180D686200F2CEB9 /* Web.html */,
-				659E15D8180D0E7700F2CEB9 /* JqueryMobileVC.h */,
-				659E15D9180D0E7700F2CEB9 /* JqueryMobileVC.m */,
 			);
 			name = Web;
 			sourceTree = "<group>";
@@ -324,10 +323,10 @@
 		65C21A3C17F5C6D1007E7E03 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				65C21A4017F5CA08007E7E03 /* JpOc.h */,
-				65C21A4117F5CA08007E7E03 /* JpOc.m */,
-				6580943517F7CF310002F164 /* Calculator.h */,
-				6580943617F7CF310002F164 /* Calculator.m */,
+				659E160C180D99CD00F2CEB9 /* JpOc.h */,
+				659E160D180D99CD00F2CEB9 /* JpOc.m */,
+				659E1609180D99C200F2CEB9 /* Calculator.h */,
+				659E160A180D99C200F2CEB9 /* Calculator.m */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -335,8 +334,8 @@
 		65FA4B9E180033720036969E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				65995E3217FF8E65003054B6 /* recipes.plist */,
-				65FA4B9F180033B90036969E /* JOne.xcdatamodeld */,
+				659E160F180D9F9300F2CEB9 /* JOne.xcdatamodeld */,
+				659E1611180D9F9300F2CEB9 /* recipes.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -426,13 +425,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65995E3317FF8E65003054B6 /* recipes.plist in Resources */,
+				659E1608180D996A00F2CEB9 /* SimpleTableCell.xib in Resources */,
+				659E1613180D9F9300F2CEB9 /* recipes.plist in Resources */,
 				659E15DD180D0F7D00F2CEB9 /* JqueryMobile in Resources */,
 				659E15E2180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt in Resources */,
 				658ECD4417F3F321007B02A6 /* Images.xcassets in Resources */,
 				659E15E8180D686200F2CEB9 /* Web.html in Resources */,
 				658ECD3317F3F321007B02A6 /* InfoPlist.strings in Resources */,
-				65C7BA9217FF03EC00264D2E /* SimpleTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,22 +451,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				65FA4B9317FFEA240036969E /* WebViewVC.m in Sources */,
-				6580943D17F812480002F164 /* PropertyListTableVC.m in Sources */,
-				65C21A4517F5D04F007E7E03 /* FormVC.m in Sources */,
-				65FA4B9D18001E700036969E /* PropertyListTableDetailVC.m in Sources */,
-				655765831800FEF5004B884B /* CollectionVC.m in Sources */,
+				659E15F9180D987F00F2CEB9 /* CollectionHeaderView.m in Sources */,
+				659E1607180D996A00F2CEB9 /* SimpleTableCell.m in Sources */,
 				659E15E3180D64BD00F2CEB9 /* WebViewJavascriptBridge.m in Sources */,
-				65C7BA8E17FF02DB00264D2E /* SimpleTableCell.m in Sources */,
-				6557657D1800EDE8004B884B /* CoreDataTableVC.m in Sources */,
-				6557658918019951004B884B /* CollectionDetailVC.m in Sources */,
-				658ECD4217F3F321007B02A6 /* SampleVC.m in Sources */,
+				659E15FC180D987F00F2CEB9 /* FormVC.m in Sources */,
 				659E15E6180D64D300F2CEB9 /* ViewPagerController.m in Sources */,
-				65C21A4217F5CA08007E7E03 /* JpOc.m in Sources */,
-				65FA4BA1180033B90036969E /* JOne.xcdatamodeld in Sources */,
-				6580943717F7CF310002F164 /* Calculator.m in Sources */,
+				659E15FB180D987F00F2CEB9 /* CoreDataTableVC.m in Sources */,
+				659E15F8180D987F00F2CEB9 /* CollectionDetailVC.m in Sources */,
+				659E160B180D99C200F2CEB9 /* Calculator.m in Sources */,
+				659E15FE180D987F00F2CEB9 /* PropertyListTableVC.m in Sources */,
+				659E160E180D99CD00F2CEB9 /* JpOc.m in Sources */,
+				659E1600180D98A900F2CEB9 /* SampleVC.m in Sources */,
+				659E15FD180D987F00F2CEB9 /* PropertyListTableDetailVC.m in Sources */,
+				659E1612180D9F9300F2CEB9 /* JOne.xcdatamodeld in Sources */,
+				659E15FA180D987F00F2CEB9 /* CollectionVC.m in Sources */,
 				658ECD3917F3F321007B02A6 /* JpAppDelegate.m in Sources */,
-				65576586180193D6004B884B /* CollectionHeaderView.m in Sources */,
-				659E15DA180D0E7700F2CEB9 /* JqueryMobileVC.m in Sources */,
+				659E1603180D98F100F2CEB9 /* JqueryMobileVC.m in Sources */,
 				658ECD3517F3F321007B02A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +475,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654D474018005FED00FE9757 /* FormVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,13 +707,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		65FA4B9F180033B90036969E /* JOne.xcdatamodeld */ = {
+		659E160F180D9F9300F2CEB9 /* JOne.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				65FA4BA0180033B90036969E /* JOne.xcdatamodel */,
+				659E1610180D9F9300F2CEB9 /* JOne.xcdatamodel */,
 			);
-			currentVersion = 65FA4BA0180033B90036969E /* JOne.xcdatamodel */;
-			path = JOne.xcdatamodeld;
+			currentVersion = 659E1610180D9F9300F2CEB9 /* JOne.xcdatamodel */;
+			name = JOne.xcdatamodeld;
+			path = Data/JOne.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
