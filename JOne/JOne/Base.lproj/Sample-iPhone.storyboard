@@ -131,26 +131,16 @@
             </objects>
             <point key="canvasLocation" x="2586" y="381"/>
         </scene>
-        <!--Web ViewVC-->
+        <!--View Controller-->
         <scene sceneID="xcG-23-jqS">
             <objects>
-                <viewController storyboardIdentifier="WebViewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4K8-ta-ePN" customClass="WebViewVC" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="4K8-ta-ePN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Heb-4R-8C2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="kwU-HL-47f">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="4SC-8z-3qq"/>
-                    <connections>
-                        <outlet property="webView" destination="kwU-HL-47f" id="rJG-e1-pN2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3h-9M-MpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

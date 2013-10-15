@@ -29,7 +29,7 @@
     
     self.codes = [[NSMutableArray alloc] initWithObjects:@"Objective-C", @"Web View", @"Jquery Mobile", nil];
     self.xibs = [[NSMutableArray alloc] initWithObjects:@"Table View",@"Collection View", nil];
-    self.storyboards = [[NSMutableArray alloc] initWithObjects:@"Form",@"Property List Table",@"Core Data Table",@"Collection View",@"Tab Bar : Web View", nil];
+    self.storyboards = [[NSMutableArray alloc] initWithObjects:@"Form",@"Property List Table",@"Core Data Table",@"Collection View",@"Bottom Tab Bar", nil];
     
     self.titles = [[NSMutableArray alloc] initWithObjects:@"Code",@"Xib",@"Storyboard", nil];
 }
@@ -148,7 +148,7 @@
         } else if ([itemNameSel isEqualToString:@"Core Data Table"]) {
             UITabBarController *coreDataTableVC = [storyboard instantiateViewControllerWithIdentifier:@"CoreDataTableVC"];
             [self.navigationController pushViewController:coreDataTableVC  animated:YES];
-        } else if ([itemNameSel isEqualToString:@"Tab Bar : Web View"]) {
+        } else if ([itemNameSel isEqualToString:@"Bottom Tab Bar"]) {
             UITabBarController *tabBarVC = [storyboard instantiateViewControllerWithIdentifier:@"TabBarVC"];
             [self.navigationController pushViewController:tabBarVC  animated:YES];
         } else if ([itemNameSel isEqualToString:@"Collection View"]) {
