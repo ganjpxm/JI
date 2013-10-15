@@ -78,7 +78,8 @@
     
     if (kind == UICollectionElementKindSectionHeader) {
         CollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-        NSString *title = [[NSString alloc]initWithFormat:@"Group #%li", indexPath.section + 1];
+        long l = indexPath.section + 1;
+        NSString *title = [[NSString alloc]initWithFormat:@"Group #%li", l];
         headerView.title.text = title;
         UIImage *headerImage = [UIImage imageNamed:@"header_banner"];
         headerView.backgroundImage.image = headerImage;

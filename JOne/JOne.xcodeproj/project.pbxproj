@@ -27,8 +27,13 @@
 		658ECD4C17F3F321007B02A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2817F3F321007B02A6 /* Foundation.framework */; };
 		658ECD4D17F3F321007B02A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2C17F3F321007B02A6 /* UIKit.framework */; };
 		658ECD5517F3F321007B02A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 658ECD5317F3F321007B02A6 /* InfoPlist.strings */; };
-		658F81E717F57CA50090BC05 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658F81E617F57CA50090BC05 /* ViewPagerController.m */; };
 		65995E3317FF8E65003054B6 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65995E3217FF8E65003054B6 /* recipes.plist */; };
+		659E15DA180D0E7700F2CEB9 /* JqueryMobileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15D9180D0E7700F2CEB9 /* JqueryMobileVC.m */; };
+		659E15DD180D0F7D00F2CEB9 /* JqueryMobile in Resources */ = {isa = PBXBuildFile; fileRef = 659E15DC180D0F7D00F2CEB9 /* JqueryMobile */; };
+		659E15E2180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 659E15E0180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt */; };
+		659E15E3180D64BD00F2CEB9 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15E1180D64BD00F2CEB9 /* WebViewJavascriptBridge.m */; };
+		659E15E6180D64D300F2CEB9 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659E15E5180D64D300F2CEB9 /* ViewPagerController.m */; };
+		659E15E8180D686200F2CEB9 /* Web.html in Resources */ = {isa = PBXBuildFile; fileRef = 659E15E7180D686200F2CEB9 /* Web.html */; };
 		65C21A4217F5CA08007E7E03 /* JpOc.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C21A4117F5CA08007E7E03 /* JpOc.m */; };
 		65C21A4517F5D04F007E7E03 /* FormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C21A4417F5D04F007E7E03 /* FormVC.m */; };
 		65C7BA8E17FF02DB00264D2E /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BA8D17FF02DB00264D2E /* SimpleTableCell.m */; };
@@ -85,9 +90,16 @@
 		658ECD5217F3F321007B02A6 /* JOneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JOneTests-Info.plist"; sourceTree = "<group>"; };
 		658ECD5417F3F321007B02A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		658F81E317F57A6F0090BC05 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		658F81E517F57CA50090BC05 /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerController.h; sourceTree = "<group>"; };
-		658F81E617F57CA50090BC05 /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerController.m; sourceTree = "<group>"; };
 		65995E3217FF8E65003054B6 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
+		659E15D8180D0E7700F2CEB9 /* JqueryMobileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JqueryMobileVC.h; path = ../JqueryMobileVC.h; sourceTree = "<group>"; };
+		659E15D9180D0E7700F2CEB9 /* JqueryMobileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JqueryMobileVC.m; path = ../JqueryMobileVC.m; sourceTree = "<group>"; };
+		659E15DC180D0F7D00F2CEB9 /* JqueryMobile */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JqueryMobile; path = Web/JqueryMobile; sourceTree = "<group>"; };
+		659E15DF180D64BC00F2CEB9 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge.h; path = Core/WebViewJavascriptBridge/WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		659E15E0180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WebViewJavascriptBridge.js.txt; path = Core/WebViewJavascriptBridge/WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
+		659E15E1180D64BD00F2CEB9 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridge.m; path = Core/WebViewJavascriptBridge/WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		659E15E4180D64D300F2CEB9 /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewPagerController.h; path = Core/Wideget/ViewPagerController.h; sourceTree = "<group>"; };
+		659E15E5180D64D300F2CEB9 /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewPagerController.m; path = Core/Wideget/ViewPagerController.m; sourceTree = "<group>"; };
+		659E15E7180D686200F2CEB9 /* Web.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Web.html; path = Web/Web.html; sourceTree = "<group>"; };
 		65C21A4017F5CA08007E7E03 /* JpOc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpOc.h; sourceTree = "<group>"; };
 		65C21A4117F5CA08007E7E03 /* JpOc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpOc.m; sourceTree = "<group>"; };
 		65C21A4317F5D04F007E7E03 /* FormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormVC.h; sourceTree = "<group>"; };
@@ -216,6 +228,7 @@
 		658F81E217F57A350090BC05 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				659E15DE180D644800F2CEB9 /* WebViewJavascriptBridge */,
 				658F81E417F57C720090BC05 /* Wideget */,
 				658F81E317F57A6F0090BC05 /* Constants.h */,
 			);
@@ -225,8 +238,8 @@
 		658F81E417F57C720090BC05 /* Wideget */ = {
 			isa = PBXGroup;
 			children = (
-				658F81E517F57CA50090BC05 /* ViewPagerController.h */,
-				658F81E617F57CA50090BC05 /* ViewPagerController.m */,
+				659E15E4180D64D300F2CEB9 /* ViewPagerController.h */,
+				659E15E5180D64D300F2CEB9 /* ViewPagerController.m */,
 			);
 			name = Wideget;
 			sourceTree = "<group>";
@@ -234,6 +247,7 @@
 		658F81E917F57CC10090BC05 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				659E15DB180D0EC700F2CEB9 /* Web */,
 				65C21A3C17F5C6D1007E7E03 /* Code */,
 				658F81EA17F57CDA0090BC05 /* UiCode */,
 				658F81EB17F57CE40090BC05 /* UiXib */,
@@ -268,8 +282,6 @@
 				658ECD3D17F3F321007B02A6 /* Sample-iPad.storyboard */,
 				65C21A4317F5D04F007E7E03 /* FormVC.h */,
 				65C21A4417F5D04F007E7E03 /* FormVC.m */,
-				65FA4B9117FFEA240036969E /* WebViewVC.h */,
-				65FA4B9217FFEA240036969E /* WebViewVC.m */,
 				6580943B17F812480002F164 /* PropertyListTableVC.h */,
 				6580943C17F812480002F164 /* PropertyListTableVC.m */,
 				65FA4B9B18001E700036969E /* PropertyListTableDetailVC.h */,
@@ -284,6 +296,29 @@
 				65576585180193D6004B884B /* CollectionHeaderView.m */,
 			);
 			name = UiStoryboard;
+			sourceTree = "<group>";
+		};
+		659E15DB180D0EC700F2CEB9 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				659E15DC180D0F7D00F2CEB9 /* JqueryMobile */,
+				65FA4B9117FFEA240036969E /* WebViewVC.h */,
+				65FA4B9217FFEA240036969E /* WebViewVC.m */,
+				659E15E7180D686200F2CEB9 /* Web.html */,
+				659E15D8180D0E7700F2CEB9 /* JqueryMobileVC.h */,
+				659E15D9180D0E7700F2CEB9 /* JqueryMobileVC.m */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		659E15DE180D644800F2CEB9 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				659E15DF180D64BC00F2CEB9 /* WebViewJavascriptBridge.h */,
+				659E15E0180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt */,
+				659E15E1180D64BD00F2CEB9 /* WebViewJavascriptBridge.m */,
+			);
+			name = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 		65C21A3C17F5C6D1007E7E03 /* Code */ = {
@@ -392,7 +427,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				65995E3317FF8E65003054B6 /* recipes.plist in Resources */,
+				659E15DD180D0F7D00F2CEB9 /* JqueryMobile in Resources */,
+				659E15E2180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt in Resources */,
 				658ECD4417F3F321007B02A6 /* Images.xcassets in Resources */,
+				659E15E8180D686200F2CEB9 /* Web.html in Resources */,
 				658ECD3317F3F321007B02A6 /* InfoPlist.strings in Resources */,
 				65C7BA9217FF03EC00264D2E /* SimpleTableCell.xib in Resources */,
 			);
@@ -418,16 +456,18 @@
 				65C21A4517F5D04F007E7E03 /* FormVC.m in Sources */,
 				65FA4B9D18001E700036969E /* PropertyListTableDetailVC.m in Sources */,
 				655765831800FEF5004B884B /* CollectionVC.m in Sources */,
+				659E15E3180D64BD00F2CEB9 /* WebViewJavascriptBridge.m in Sources */,
 				65C7BA8E17FF02DB00264D2E /* SimpleTableCell.m in Sources */,
 				6557657D1800EDE8004B884B /* CoreDataTableVC.m in Sources */,
 				6557658918019951004B884B /* CollectionDetailVC.m in Sources */,
 				658ECD4217F3F321007B02A6 /* SampleVC.m in Sources */,
+				659E15E6180D64D300F2CEB9 /* ViewPagerController.m in Sources */,
 				65C21A4217F5CA08007E7E03 /* JpOc.m in Sources */,
 				65FA4BA1180033B90036969E /* JOne.xcdatamodeld in Sources */,
 				6580943717F7CF310002F164 /* Calculator.m in Sources */,
 				658ECD3917F3F321007B02A6 /* JpAppDelegate.m in Sources */,
-				658F81E717F57CA50090BC05 /* ViewPagerController.m in Sources */,
 				65576586180193D6004B884B /* CollectionHeaderView.m in Sources */,
+				659E15DA180D0E7700F2CEB9 /* JqueryMobileVC.m in Sources */,
 				658ECD3517F3F321007B02A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

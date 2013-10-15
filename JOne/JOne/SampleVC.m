@@ -11,6 +11,8 @@
 #import "FormVC.h"
 #import "PropertyListTableVC.h"
 #import "CollectionVC.h"
+#import "JqueryMobileVC.h"
+#import "WebViewVC.h"
 
 @interface SampleVC ()
 
@@ -25,7 +27,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.codes = [[NSMutableArray alloc] initWithObjects:@"Objective-C", @"UI", nil];
+    self.codes = [[NSMutableArray alloc] initWithObjects:@"Objective-C", @"Web View", @"Jquery Mobile", nil];
     self.xibs = [[NSMutableArray alloc] initWithObjects:@"Table View",@"Collection View", nil];
     self.storyboards = [[NSMutableArray alloc] initWithObjects:@"Form",@"Property List Table",@"Core Data Table",@"Collection View",@"Tab Bar : Web View", nil];
     
@@ -124,6 +126,12 @@
         itemNameSel = [codes objectAtIndex:indexPath.row];
         if ([itemNameSel isEqualToString:@"Objective-C"]) {
             [JpOc testOc];
+        } else if ([itemNameSel isEqualToString:@"Web View"]) {
+            WebViewVC *webViewVc = [[WebViewVC alloc] init];
+            [self.navigationController pushViewController:webViewVc animated:YES];
+        } else if ([itemNameSel isEqualToString:@"Jquery Mobile"]) {
+            JqueryMobileVC *jqmVc = [[JqueryMobileVC alloc] init];
+            [self.navigationController pushViewController:jqmVc animated:YES];
         }
         [JpOc testOc];
     } else if( indexPath.section == 1 ) {
