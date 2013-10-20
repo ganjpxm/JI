@@ -10,6 +10,7 @@
 
 @interface FormVC : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewUi;
 @property (weak, nonatomic) IBOutlet UILabel *lableUi;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldUi;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControlUi;
@@ -18,9 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIStepper *stepperUi;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressViewUi;
 @property (weak, nonatomic) IBOutlet UITextView *textViewUi;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePickerUi;
 
 @property (strong, nonatomic) NSString *itemName;
-@property (strong) NSManagedObject *formInfo;
+@property (strong) NSManagedObject *cmType;
 
 - (IBAction)onCancel:(id)sender;
 - (IBAction)onSave:(id)sender;

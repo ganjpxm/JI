@@ -13,6 +13,7 @@
 #import "CollectionVC.h"
 #import "JqueryMobileVC.h"
 #import "WebViewVC.h"
+#import "MasterViewController.h"
 
 @interface SampleVC ()
 
@@ -27,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.codes = [[NSMutableArray alloc] initWithObjects:@"Objective-C", @"Web View", @"Jquery Mobile", nil];
+    self.codes = [[NSMutableArray alloc] initWithObjects:@"Objective-C", @"Web View", @"Jquery Mobile", @"Network", nil];
     self.xibs = [[NSMutableArray alloc] initWithObjects:@"Table View",@"Collection View", nil];
     self.storyboards = [[NSMutableArray alloc] initWithObjects:@"Form",@"Property List Table",@"Core Data Table",@"Collection View",@"Bottom Tab Bar", nil];
     
@@ -132,8 +133,10 @@
         } else if ([itemNameSel isEqualToString:@"Jquery Mobile"]) {
             JqueryMobileVC *jqmVc = [[JqueryMobileVC alloc] init];
             [self.navigationController pushViewController:jqmVc animated:YES];
+        } else if ([itemNameSel isEqualToString:@"Network"]) {
+            MasterViewController *networkVc = [[MasterViewController alloc] init];
+            [self.navigationController pushViewController:networkVc animated:YES];
         }
-        [JpOc testOc];
     } else if( indexPath.section == 1 ) {
         itemNameSel = [xibs objectAtIndex:indexPath.row];
     } else if( indexPath.section == 2 ) {

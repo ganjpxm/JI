@@ -8,9 +8,12 @@
 
 #import "CoreDataTableVC.h"
 #import "FormVC.h"
+#import "CmTypesXMLParser.h"
+#import "NSString+URLEncoding.h"
+#import "NSNumber+Message.h"
 
 @interface CoreDataTableVC ()
-@property (strong) NSMutableArray *formInfos;
+@property (strong) NSMutableArray *cmTypes;
 @end
 
 @implementation CoreDataTableVC
@@ -38,19 +41,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    //NSXML Data
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(reloadView:)
+//                                                 name:@"reloadViewNotification"
+//                                               object:nil];
+//    
+//    CmTypesXMLParser *parser = [CmTypesXMLParser new];
+//    [parser start];
+    
+    //NSJSONSerialization Data
+//    NSString* path = [[NSBundle mainBundle] pathForResource:@"CmTypes" ofType:@"json"];
+//    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
+//    NSError *error;
+//    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
+//                                                 options:NSJSONReadingMutableContainers error:&error];
+//    if (!jsonObj || error) {
+//        NSLog(@"JSON Resolve Fail");
+//    }
+//    self.cmTypes = [jsonObj objectForKey:@"Record"];
+    
+    [self startRequest];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    // Fetch the devices from persistent data store
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"FormInfo"];
-    self.formInfos = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
-    [self.tableView reloadData];
+    // Core Data : Fetch the devices from persistent data store
+//    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"CmType"];
+//    self.cmTypes = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+//    
+//    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +94,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.formInfos.count;
+    return self.cmTypes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,9 +103,13 @@
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSManagedObject *formInfo = [self.formInfos objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [formInfo valueForKey:@"text_field_value"]]];
-    [cell.detailTextLabel setText:[formInfo valueForKey:@"text_view_value"]];
+    NSManagedObject *cmType = [self.cmTypes objectAtIndex:indexPath.row];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [cmType valueForKey:@"strType"]]];
+    
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
+    [cell.detailTextLabel setText:[dateFormater stringFromDate:[cmType valueForKey:@"dateType"]]];
+//    [cell.detailTextLabel setText:[cmType valueForKey:@"dateType"]];
     
     return cell;
 }
@@ -101,7 +128,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete object from database
-        [context deleteObject:[self.formInfos objectAtIndex:indexPath.row]];
+        [context deleteObject:[self.cmTypes objectAtIndex:indexPath.row]];
         
         NSError *error = nil;
         if (![context save:&error]) {
@@ -110,7 +137,7 @@
         }
         
         // Remove device from table view
-        [self.formInfos removeObjectAtIndex:indexPath.row];
+        [self.cmTypes removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
@@ -119,7 +146,7 @@
 {
     UIStoryboard *storyboard = self.storyboard;
     FormVC *formVC = [storyboard instantiateViewControllerWithIdentifier:@"FormVC"];
-    formVC.formInfo = [self.formInfos objectAtIndex:indexPath.row];
+    formVC.cmType = [self.cmTypes objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:formVC  animated:YES];
 }
 
@@ -127,5 +154,64 @@
     UIStoryboard *storyboard = self.storyboard;
     FormVC *formVC = [storyboard instantiateViewControllerWithIdentifier:@"FormVC"];
     [self.navigationController pushViewController:formVC  animated:YES];
+}
+
+#pragma mark - do notification
+-(void)reloadView:(NSNotification*)notification
+{
+    NSMutableArray *resList = [notification object];
+    self.cmTypes  = resList;
+    [self.tableView reloadData];
+}
+
+#pragma mark - Network
+-(void)startRequest
+{
+    
+    NSString *strURL = [[NSString alloc] initWithFormat:
+                        @"http://192.168.0.103:8080/jp/test/json?email=%@&type=%@&action=%@",
+                        @"ganjp_xm@sina.com",@"JSON",@"query"];
+    
+	NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
+	
+    //cashePolicy, timeoutInterval
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    
+    
+    NSData *data  = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    [self reloadViewByJson:resDict];
+    
+    /*
+     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+     [NSURLConnection sendAsynchronousRequest:request
+     queue:queue
+     completionHandler:^(NSURLResponse* response, NSData* data, NSError* error) {
+     
+     NSLog(@"请求完成...");
+     NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+     [self reloadView:resDict];
+     
+     }];
+     */
+    
+}
+
+-(void)reloadViewByJson:(NSDictionary*)res
+{
+    NSNumber *resultCodeObj = [res objectForKey:@"ResultCode"];
+    if ([resultCodeObj integerValue] >=0)
+    {
+        self.cmTypes = [res objectForKey:@"Record"];
+        [self.tableView reloadData];
+    } else {
+        NSString *errorStr = [resultCodeObj errorMessage];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Info"
+                                                            message:errorStr
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+        [alertView show];
+    }
 }
 @end

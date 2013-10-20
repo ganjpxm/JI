@@ -14,8 +14,8 @@
 
 @implementation FormVC
 
-@synthesize textFieldUi,textViewUi;
-@synthesize itemName, formInfo;
+@synthesize textFieldUi,textViewUi,datePickerUi;
+@synthesize itemName, cmType;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -39,10 +39,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.scrollViewUi setScrollEnabled:YES];
+    [self.scrollViewUi setContentSize:CGSizeMake(320, 1000)];
+    
     textFieldUi.text = itemName;
     
-    if (self.formInfo) {
-        [self.textFieldUi setText:[self.formInfo valueForKey:@"text_field_value"]];
+    if (self.cmType) {
+        [self.textFieldUi setText:[self.cmType valueForKey:@"strType"]];
     }
 }
 
@@ -61,15 +64,15 @@
 - (IBAction)onSave:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    if (self.formInfo) {
-        // Update existing formInfo
-        [self.formInfo setValue:self.textFieldUi.text forKey:@"text_field_value"];
-        [self.formInfo setValue:self.textViewUi.text forKey:@"text_view_value"];
+    if (self.cmType) {
+        // Update existing CmType
+        [self.cmType setValue:self.textFieldUi.text forKey:@"strType"];
+        [self.cmType setValue:self.datePickerUi.date forKey:@"dateType"];
     } else {
-        // Create a new formInfo
-        NSManagedObject *newFormInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FormInfo" inManagedObjectContext:context];
-        [newFormInfo setValue:self.textFieldUi.text forKey:@"text_field_value"];
-        [newFormInfo setValue:self.textViewUi.text forKey:@"text_view_value"];
+        // Create a new CmType
+        NSManagedObject *newCmType = [NSEntityDescription insertNewObjectForEntityForName:@"CmType" inManagedObjectContext:context];
+        [newCmType setValue:self.textFieldUi.text forKey:@"strType"];
+        [newCmType setValue:self.datePickerUi.date forKey:@"dateType"];
     }
     
     NSError *error = nil;
