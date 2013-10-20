@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652638681810306000048990 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 652638671810306000048990 /* NSString+URLEncoding.m */; };
+		6526386E1810333200048990 /* NSNumber+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6526386D1810333200048990 /* NSNumber+Message.m */; };
 		6557658B1801B7F2004B884B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6557658A1801B7F2004B884B /* Social.framework */; };
+		658032541813639E004D0E84 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 658032531813639E004D0E84 /* libz.dylib */; };
+		6580325618136460004D0E84 /* CmTypeNSXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6580325518136460004D0E84 /* CmTypeNSXML.xml */; };
+		6580325718136D78004D0E84 /* Sample-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658ECD3A17F3F321007B02A6 /* Sample-iPhone.storyboard */; };
+		6580325818136D78004D0E84 /* Sample-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658ECD3D17F3F321007B02A6 /* Sample-iPad.storyboard */; };
+		6580325C1813B1E3004D0E84 /* CmTypesXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580325B1813B1E3004D0E84 /* CmTypesXMLParser.m */; };
+		6580326D1813E5F7004D0E84 /* CmTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6580326C1813E5F7004D0E84 /* CmTypes.json */; };
 		658ECD2917F3F321007B02A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2817F3F321007B02A6 /* Foundation.framework */; };
 		658ECD2B17F3F321007B02A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2A17F3F321007B02A6 /* CoreGraphics.framework */; };
 		658ECD2D17F3F321007B02A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658ECD2C17F3F321007B02A6 /* UIKit.framework */; };
@@ -56,7 +64,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652638661810306000048990 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncoding.h"; path = "Core/Util/NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		652638671810306000048990 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "Core/Util/NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		6526386C1810333200048990 /* NSNumber+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Message.h"; path = "Core/Util/NSNumber+Message.h"; sourceTree = "<group>"; };
+		6526386D1810333200048990 /* NSNumber+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Message.m"; path = "Core/Util/NSNumber+Message.m"; sourceTree = "<group>"; };
 		6557658A1801B7F2004B884B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		658032531813639E004D0E84 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6580325518136460004D0E84 /* CmTypeNSXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = CmTypeNSXML.xml; path = Data/CmTypeNSXML.xml; sourceTree = "<group>"; };
+		6580325A1813B1E3004D0E84 /* CmTypesXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CmTypesXMLParser.h; path = Data/Class/CmTypesXMLParser.h; sourceTree = "<group>"; };
+		6580325B1813B1E3004D0E84 /* CmTypesXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CmTypesXMLParser.m; path = Data/Class/CmTypesXMLParser.m; sourceTree = "<group>"; };
+		6580326C1813E5F7004D0E84 /* CmTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CmTypes.json; path = Data/CmTypes.json; sourceTree = "<group>"; };
 		658ECD2517F3F321007B02A6 /* JOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658ECD2817F3F321007B02A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		658ECD2A17F3F321007B02A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658032541813639E004D0E84 /* libz.dylib in Frameworks */,
 				6557658B1801B7F2004B884B /* Social.framework in Frameworks */,
 				65FA4BA6180055050036969E /* CoreData.framework in Frameworks */,
 				658ECD2B17F3F321007B02A6 /* CoreGraphics.framework in Frameworks */,
@@ -146,6 +164,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		652638651810304500048990 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6526386C1810333200048990 /* NSNumber+Message.h */,
+				6526386D1810333200048990 /* NSNumber+Message.m */,
+				652638661810306000048990 /* NSString+URLEncoding.h */,
+				652638671810306000048990 /* NSString+URLEncoding.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		658032591813B1CC004D0E84 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				6580325A1813B1E3004D0E84 /* CmTypesXMLParser.h */,
+				6580325B1813B1E3004D0E84 /* CmTypesXMLParser.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 		658ECD1C17F3F321007B02A6 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +206,7 @@
 		658ECD2717F3F321007B02A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				658032531813639E004D0E84 /* libz.dylib */,
 				6557658A1801B7F2004B884B /* Social.framework */,
 				65FA4BA5180055050036969E /* CoreData.framework */,
 				65E4B48217F40C00007A5075 /* MapKit.framework */,
@@ -227,6 +266,7 @@
 		658F81E217F57A350090BC05 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				652638651810304500048990 /* Util */,
 				659E15DE180D644800F2CEB9 /* WebViewJavascriptBridge */,
 				658F81E417F57C720090BC05 /* Wideget */,
 				658F81E317F57A6F0090BC05 /* Constants.h */,
@@ -334,6 +374,9 @@
 		65FA4B9E180033720036969E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				658032591813B1CC004D0E84 /* Class */,
+				6580326C1813E5F7004D0E84 /* CmTypes.json */,
+				6580325518136460004D0E84 /* CmTypeNSXML.xml */,
 				659E160F180D9F9300F2CEB9 /* JOne.xcdatamodeld */,
 				659E1611180D9F9300F2CEB9 /* recipes.plist */,
 			);
@@ -425,9 +468,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6580325718136D78004D0E84 /* Sample-iPhone.storyboard in Resources */,
+				6580326D1813E5F7004D0E84 /* CmTypes.json in Resources */,
+				6580325818136D78004D0E84 /* Sample-iPad.storyboard in Resources */,
 				659E1608180D996A00F2CEB9 /* SimpleTableCell.xib in Resources */,
 				659E1613180D9F9300F2CEB9 /* recipes.plist in Resources */,
 				659E15DD180D0F7D00F2CEB9 /* JqueryMobile in Resources */,
+				6580325618136460004D0E84 /* CmTypeNSXML.xml in Resources */,
 				659E15E2180D64BD00F2CEB9 /* WebViewJavascriptBridge.js.txt in Resources */,
 				658ECD4417F3F321007B02A6 /* Images.xcassets in Resources */,
 				659E15E8180D686200F2CEB9 /* Web.html in Resources */,
@@ -458,8 +505,11 @@
 				659E15E6180D64D300F2CEB9 /* ViewPagerController.m in Sources */,
 				659E15FB180D987F00F2CEB9 /* CoreDataTableVC.m in Sources */,
 				659E15F8180D987F00F2CEB9 /* CollectionDetailVC.m in Sources */,
+				652638681810306000048990 /* NSString+URLEncoding.m in Sources */,
 				659E160B180D99C200F2CEB9 /* Calculator.m in Sources */,
+				6526386E1810333200048990 /* NSNumber+Message.m in Sources */,
 				659E15FE180D987F00F2CEB9 /* PropertyListTableVC.m in Sources */,
+				6580325C1813B1E3004D0E84 /* CmTypesXMLParser.m in Sources */,
 				659E160E180D99CD00F2CEB9 /* JpOc.m in Sources */,
 				659E1600180D98A900F2CEB9 /* SampleVC.m in Sources */,
 				659E15FD180D987F00F2CEB9 /* PropertyListTableDetailVC.m in Sources */,
