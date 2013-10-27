@@ -64,7 +64,7 @@ NSString *staticStr;
 {
     JpOc *jpOc = [[JpOc alloc] init];
     [jpOc testBasicType];
-    [jpOc testNString];
+    [jpOc testNS];
     [jpOc testCalculator];
 }
 
@@ -91,9 +91,10 @@ NSString *staticStr;
         NSLog(@"------");
     }
     NSLog(@"---End---");
+
 }
 
-- (void)testNString
+- (void)testNS
 {
     publicStr1 = @"1.Public String 1!";
     publicStr2 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%d.Public String %i!",2,2]];
@@ -119,6 +120,27 @@ NSString *staticStr;
     NSDate *date =[dateFormat dateFromString:@"1980-01-01 00:00:01"];
     NSLog(@"NSDate : %@", date);
     
+//    NSString *myString = @"Hello, world!";
+//    NSString *myString2 = [NSString stringWithCString:"Hello, world!"];
+//    
+//    NSNumber *meaningOfLife = [NSNumber numberWithInt:42];
+//    NSNumber *ussReliantPrefixCode = [NSNumber numberWithUnsignedInt:16309];
+//    NSNumber *floatPi = [NSNumber numberWithFloat:3.14159];
+//    NSNumber *doublePi = [NSNumber numberWithFloat:3.14159265358979];
+//    NSNumber *avogadrosNumber = [NSNumber numberWithDouble:6.02214129E+23];
+//    NSNumber *meaningOfLife2 = @42;
+//    NSNumber *ussReliantPrefixCode2 = @16309U;
+//    NSNumber *floatPi2 = @3.14159F;
+//    NSNumber *doublePi2 = @3.14159265358979;
+//    NSNumber *avogadrosNumber2 = @6.02214129E+23;
+//    
+//    NSArray *starkFamily = [NSArray arrayWithObjects:@"Eddard",@"Catelin", nil];
+//    NSArray *starkFamily2 = @[@"Eddard",@"Catelin"];
+//    [starkFamily objectAtIndex:2];
+//    
+//    NSDictionary *importantNumbers = @{@"Meaning of life" : @42, @"USS Reliant prefix code" : @16309U, @"Single-precision pi" : @3.14159F, @"Double-precision pi" : @3.14159265358979, @"Avogadro's Number" : @6.0221415E+23};
+//    importantNumbers[@"Meaning of life"];
+//    [importantNumbers objectForKey:@"Meaning of life"];
 }
 
 - (void)testCalculator

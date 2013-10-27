@@ -107,3 +107,5 @@ typedef enum {
 #define MAX_LOGIN_FAILED_ATTEMPTS   3
 #define TIME_INTERVAL_AFTER_3_FAILED_LOGIN_ATTEMPTS    600
 
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+

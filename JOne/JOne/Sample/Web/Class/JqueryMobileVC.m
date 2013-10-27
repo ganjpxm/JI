@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setHidden:NO];
+    [self.navigationController.navigationBar setHidden:YES];
     
     mWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320,568)];
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"JqueryMobile/jqmHome.html" ofType:nil]];

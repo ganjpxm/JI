@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CmTypes>
+  <CmType id="1">
+    <dateType>2013-10-20</dateType>
+    <strType>NSXML iOS 1</strType>
+  </CmType>
+  <CmType id="2">
+    <dateType>2013-10-22</dateType>
+    <strType>NSXML iOS 2</strType>
+  </CmType>
+  <CmType id="3">
+    <dateType>2013-10-23</dateType>
+    <strType>NSXML iOS 3</strType>
+  </CmType>
+  <CmType id="4">
+    <dateType>2013-10-24</dateType>
+    <strType>NSXML iOS 4</strType>
+  </CmType>
+</CmTypes>

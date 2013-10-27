@@ -7,6 +7,12 @@
 //
 
 #import "JpAppDelegate.h"
+#import "JpDrawerVC.h"
+#import "JpLeftMenuVC.h"
+#import "MMDrawerController.h"
+#import "MMDrawerVisualState.h"
+
+static const CGFloat kPublicLeftMenuWidth = 250.0f;
 
 @implementation JpAppDelegate
 
@@ -21,6 +27,21 @@
 //    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 //    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
 //    [self.window makeKeyAndVisible];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    JpLeftMenuVC *leftVC = [[JpLeftMenuVC alloc] initWithNibName:@"JpLeftMenuViewController" bundle:nil];
+    JpDrawerVC * drawerController = [[JpDrawerVC alloc] initWithCenterViewController:leftVC.mNavSlideSwitchNC leftDrawerViewController:leftVC rightDrawerViewController:nil];
+    [drawerController setMaximumLeftDrawerWidth:kPublicLeftMenuWidth];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [drawerController setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+        MMDrawerControllerDrawerVisualStateBlock block;
+        block = [MMDrawerVisualState parallaxVisualStateBlockWithParallaxFactor:2.0];
+        block(drawerController, drawerSide, percentVisible);
+    }];
+    [self.window setRootViewController:drawerController];
+    [self.window makeKeyAndVisible];
     
     return YES;
     

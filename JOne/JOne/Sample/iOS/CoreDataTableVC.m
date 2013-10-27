@@ -51,17 +51,17 @@
 //    [parser start];
     
     //NSJSONSerialization Data
-//    NSString* path = [[NSBundle mainBundle] pathForResource:@"CmTypes" ofType:@"json"];
-//    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
-//    NSError *error;
-//    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
-//                                                 options:NSJSONReadingMutableContainers error:&error];
-//    if (!jsonObj || error) {
-//        NSLog(@"JSON Resolve Fail");
-//    }
-//    self.cmTypes = [jsonObj objectForKey:@"Record"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"CmTypes" ofType:@"json"];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
+    NSError *error;
+    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                 options:NSJSONReadingMutableContainers error:&error];
+    if (!jsonObj || error) {
+        NSLog(@"JSON Resolve Fail");
+    }
+    self.cmTypes = [jsonObj objectForKey:@"Record"];
     
-    [self startRequest];
+//    [self startRequest];
 }
 
 - (void)viewDidAppear:(BOOL)animated

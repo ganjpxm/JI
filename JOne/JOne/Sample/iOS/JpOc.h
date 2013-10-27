@@ -27,7 +27,7 @@
 
 + (void)testOc;
 - (void)testBasicType;
-- (void)testNString;
+- (void)testNS;
 - (void)testCalculator;
 
 @end
