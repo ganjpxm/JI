@@ -49,5 +49,15 @@ static NSUserDefaults *userDefaults;
         userDefaults = [NSUserDefaults standardUserDefaults];
     }
     [userDefaults setObject:anObject forKey:aKey];
+    [userDefaults synchronize];
 }
+
+//Json
++ (NSArray *) getJsonArr:(id)aJsonStr
+{
+    NSData *responseData = [NSJSONSerialization dataWithJSONObject:aJsonStr options:NSJSONWritingPrettyPrinted error:nil];
+    NSArray *jsonArr = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil];
+    return jsonArr;
+}
+
 @end

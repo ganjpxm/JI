@@ -15,5 +15,22 @@
    return ([[NSDate date] timeIntervalSince1970] * 1000);
 }
 
++ (NSString *) getDateTimeStrByMilliSecond:(long)aMillisecond
+{
+    long second = aMillisecond/1000;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:second];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
+    return [dateFormatter stringFromDate:date];
+}
+
++ (NSString *) getDateStrByMilliSecond:(long)aMillisecond
+{
+    long second = aMillisecond/1000;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:second];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy"];
+    return [dateFormatter stringFromDate:date];
+}
 
 @end

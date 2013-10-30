@@ -18,4 +18,8 @@
 //NSUserDefaults
 + (NSString *) getValueUD:(NSString *)aKey;
 + (void) setValueUD:(id)anObject forKey:(NSString *)aKey;
+
+//Json
++ (NSArray *) getJsonArr:(id)aJsonStr;
+
 @end

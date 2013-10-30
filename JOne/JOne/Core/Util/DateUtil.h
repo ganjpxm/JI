@@ -11,4 +11,8 @@
 @interface DateUtil : NSObject
 
 + (NSInteger) getCurMilliseconded;
+
++ (NSString *) getDateTimeStrByMilliSecond:(long)aMillisecond;
++ (NSString *) getDateStrByMilliSecond:(long)aMillisecond;
+
 @end

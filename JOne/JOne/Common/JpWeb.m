@@ -11,8 +11,9 @@
 #import "JpConst.h"
 #import "JpData.h"
 #import "DateUtil.h"
+#import "StringUtil.h"
 
-static NSString *const BaseURLString = @"http://www.ganjianping.com";
+static NSString *const BaseURLString = @"http://192.168.0.102:8080/jp";//@"http://www.ganjianping.com";
 
 @implementation JpWeb
 
@@ -25,6 +26,8 @@ static NSString *const BaseURLString = @"http://www.ganjianping.com";
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSLog(@"JSON: %@", responseObject);
               [JpWeb getBmConfigs:YES];
+              [JpWeb getCmArticles:YES];
+              [JpWeb getCmPhotos:YES];
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
           }
@@ -37,26 +40,24 @@ static NSString *const BaseURLString = @"http://www.ganjianping.com";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
     [parameters setObject:@"('AudioUrl','ImageUrl','VideoUrl','FileUrl','MobileTags')" forKey:@"configCds"];
-    NSString *lastTime = [JpData getValueUD:KEY_CM_CONFIG_LAST_TIME];
-    [JpData setValueUD:@"2323323" forKey:KEY_CM_CONFIG_LAST_TIME];
-    if (isUpdate && lastTime) {
-        [parameters setObject:lastTime forKey:KEY_LAST_TIME];
+    NSString *lastTime = [JpData getValueUD:KEY_BM_CONFIG_LAST_TIME];
+    if (lastTime) {
+        if (isUpdate) [parameters setObject:lastTime forKey:KEY_LAST_TIME];
+        NSLog(@"BM_CONFIG_LAST_TIME : %@, %@", lastTime, [DateUtil getDateTimeStrByMilliSecond:[lastTime longLongValue]]);
     }
-    
     [manager POST:url parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//              NSLog(@"JSON: %@", responseObject);
-              NSData *responseData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-              NSArray *jsonArr = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil];
-              if (jsonArr) {
-                  NSString *cmConfigLastTime = [JpData getValueUD:KEY_CM_CONFIG_LAST_TIME];
+              NSArray *jsonArr = [JpData getJsonArr:responseObject];
+              if (jsonArr && [jsonArr count]>0) {
+                  NSString *newLastTime = lastTime;
                   for (NSDictionary *dic in jsonArr) {
-                      NSString *time = [dic objectForKey:@"modifyTimestamp"];
-                      if (!cmConfigLastTime || [time intValue] > [cmConfigLastTime intValue]) {
-                          cmConfigLastTime = time;
+                      NSString *modifyTime = [dic objectForKey:@"modifyTimestamp"];
+                      if (!newLastTime || [modifyTime longLongValue] > [newLastTime longLongValue]) {
+                          newLastTime = modifyTime;
                       }
                   }
-                  [JpData setValueUD:cmConfigLastTime forKey:KEY_CM_CONFIG_LAST_TIME];
+                  [JpData setValueUD:[StringUtil convertStr:newLastTime] forKey:KEY_BM_CONFIG_LAST_TIME];
+                  NSLog(@"BmConfig Count: %lu,%@", [jsonArr count],newLastTime);
               }
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
@@ -64,28 +65,60 @@ static NSString *const BaseURLString = @"http://www.ganjianping.com";
     ];
 }
 
-+ (void) getCmArticles
++ (void) getCmArticles:(BOOL)isUpdate
 {
     NSString *url = [NSString stringWithFormat:@"%@/mobile/getCmArticles", BaseURLString];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *parameters = nil; //@{@"startDate": @"0"};
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    NSString *lastTime = [JpData getValueUD:KEY_CM_ARTICLE_LAST_TIME];
+    if (lastTime) {
+        if (isUpdate) [parameters setObject:[DateUtil getDateTimeStrByMilliSecond:[lastTime longLongValue]] forKey:KEY_START_DATE];
+        NSLog(@"CM_ARTICLE_LAST_TIME : %@, %@", lastTime, [DateUtil getDateTimeStrByMilliSecond:[lastTime longLongValue]]);
+    }
     [manager POST:url parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              NSLog(@"JSON: %@", responseObject);
+              NSArray *jsonArr = [JpData getJsonArr:responseObject];
+              if (jsonArr && [jsonArr count]>0) {
+                  NSString *newLastTime = lastTime;
+                  for (NSDictionary *dic in jsonArr) {
+                      NSString *modifyTime = [dic objectForKey:@"modifyTimestamp"];
+                      if (!newLastTime || [modifyTime longLongValue] > [newLastTime longLongValue]) {
+                          newLastTime = modifyTime;
+                      }
+                  }
+                  [JpData setValueUD:[StringUtil convertStr:newLastTime] forKey:KEY_CM_ARTICLE_LAST_TIME];
+                  NSLog(@"cmArticle Count: %lu,%@", [jsonArr count], newLastTime);
+              }
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
           }
      ];
 }
 
-+ (void) getCmPhotos
++ (void) getCmPhotos:(BOOL)isUpdate
 {
     NSString *url = [NSString stringWithFormat:@"%@/mobile/getCmPhotos", BaseURLString];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *parameters = nil; //@{@"startDate": @"0"};
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    NSString *lastTime = [JpData getValueUD:KEY_CM_PHOTO_LAST_TIME];
+    if (lastTime) {
+        if (isUpdate) [parameters setObject:[DateUtil getDateTimeStrByMilliSecond:[lastTime longLongValue]] forKey:KEY_START_DATE];
+        NSLog(@"CM_PHOTO_LAST_TIME : %@, %@", lastTime, [DateUtil getDateTimeStrByMilliSecond:[lastTime longLongValue]]);
+    }
     [manager POST:url parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              NSLog(@"JSON: %@", responseObject);
+              NSArray *jsonArr = [JpData getJsonArr:responseObject];
+              if (jsonArr && [jsonArr count]>0) {
+                  NSString *newLastTime = lastTime;
+                  for (NSDictionary *dic in jsonArr) {
+                      NSString *modifyTime = [dic objectForKey:@"modifyTimestamp"];
+                      if (!newLastTime || [modifyTime longLongValue] > [newLastTime longLongValue]) {
+                          newLastTime = modifyTime;
+                      }
+                  }
+                  [JpData setValueUD:[StringUtil convertStr:newLastTime] forKey:KEY_CM_PHOTO_LAST_TIME];
+                  NSLog(@"cmPhoto Count: %lu,%@", [jsonArr count], newLastTime);
+              }
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
           }

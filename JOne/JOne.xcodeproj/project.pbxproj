@@ -76,6 +76,7 @@
 		65BCD8A8181D648800EA6E7C /* Web.html in Resources */ = {isa = PBXBuildFile; fileRef = 65BCD8A7181D648800EA6E7C /* Web.html */; };
 		65E4B48117F40B97007A5075 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4B48017F40B97007A5075 /* AudioToolbox.framework */; };
 		65E4B48317F40C00007A5075 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4B48217F40C00007A5075 /* MapKit.framework */; };
+		65E74849182131E500EE4A39 /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E74848182131E500EE4A39 /* StringUtil.m */; };
 		65FA4BA6180055050036969E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FA4BA5180055050036969E /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -209,6 +210,8 @@
 		65E4B47F17F40B97007A5075 /* JOne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = JOne.entitlements; sourceTree = "<group>"; };
 		65E4B48017F40B97007A5075 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		65E4B48217F40C00007A5075 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		65E74847182131E500EE4A39 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtil.h; path = Core/Util/StringUtil.h; sourceTree = "<group>"; };
+		65E74848182131E500EE4A39 /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringUtil.m; path = Core/Util/StringUtil.m; sourceTree = "<group>"; };
 		65FA4BA5180055050036969E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -250,6 +253,8 @@
 				652638671810306000048990 /* NSString+URLEncoding.m */,
 				65B42AB0181FAE9E00EC28E1 /* DateUtil.h */,
 				65B42AB1181FAE9E00EC28E1 /* DateUtil.m */,
+				65E74847182131E500EE4A39 /* StringUtil.h */,
+				65E74848182131E500EE4A39 /* StringUtil.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -691,6 +696,7 @@
 				65BCD89D181D62EE00EA6E7C /* CollectionVC.m in Sources */,
 				65BCD8A1181D62EE00EA6E7C /* PropertyListTableVC.m in Sources */,
 				65BCD89F181D62EE00EA6E7C /* FormVC.m in Sources */,
+				65E74849182131E500EE4A39 /* StringUtil.m in Sources */,
 				65BCD8A0181D62EE00EA6E7C /* PropertyListTableDetailVC.m in Sources */,
 				65B42AB2181FAE9E00EC28E1 /* DateUtil.m in Sources */,
 				6587B54F181AC98000DC003E /* JpLeftMenuVC.m in Sources */,
