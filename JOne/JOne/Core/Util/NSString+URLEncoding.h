@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (URLEncoding)
+@interface NSString (JOne)
 
 
 -(NSString *)URLEncodedString;

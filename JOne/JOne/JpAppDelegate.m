@@ -11,6 +11,7 @@
 #import "JpLeftMenuVC.h"
 #import "MMDrawerController.h"
 #import "MMDrawerVisualState.h"
+#import "JpWeb.h"
 
 static const CGFloat kPublicLeftMenuWidth = 250.0f;
 
@@ -30,7 +31,7 @@ static const CGFloat kPublicLeftMenuWidth = 250.0f;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    JpLeftMenuVC *leftVC = [[JpLeftMenuVC alloc] initWithNibName:@"JpLeftMenuViewController" bundle:nil];
+    JpLeftMenuVC *leftVC = [[JpLeftMenuVC alloc] initWithNibName:@"JpLeftMenuVC" bundle:nil];
     JpDrawerVC * drawerController = [[JpDrawerVC alloc] initWithCenterViewController:leftVC.mNavSlideSwitchNC leftDrawerViewController:leftVC rightDrawerViewController:nil];
     [drawerController setMaximumLeftDrawerWidth:kPublicLeftMenuWidth];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
@@ -43,6 +44,7 @@ static const CGFloat kPublicLeftMenuWidth = 250.0f;
     [self.window setRootViewController:drawerController];
     [self.window makeKeyAndVisible];
     
+    [JpWeb syncJweb];
     return YES;
     
 }

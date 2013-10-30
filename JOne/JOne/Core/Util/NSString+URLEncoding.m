@@ -8,7 +8,7 @@
 
 #import "NSString+URLEncoding.h"
 
-@implementation NSString (URLEncoding)
+@implementation NSString (JOne)
 
 
 - (NSString *)URLEncodedString

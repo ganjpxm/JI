@@ -60,7 +60,7 @@
         NSLog(@"JSON Resolve Fail");
     }
     self.cmTypes = [jsonObj objectForKey:@"Record"];
-    
+        
 //    [self startRequest];
 }
 

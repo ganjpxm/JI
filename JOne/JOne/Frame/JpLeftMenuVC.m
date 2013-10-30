@@ -10,7 +10,7 @@
 #import "JpSlideSwitchVC.h"
 #import "UIViewController+MMDrawerController.h"
 #import "JpConst.h"
-#import "JpUtil.h"
+#import "JpData.h"
 #import "SampleVC.h"
 #import "JqueryMobileVC.h"
 
@@ -34,7 +34,7 @@
         settings =[[NSMutableArray alloc] initWithArray:[SETTINGS componentsSeparatedByString:@","]];
         titles = [[NSMutableArray alloc] initWithArray:[LEFT_MENU_TITLES componentsSeparatedByString:@","]];
         
-        self.mNavSlideSwitchNC = [[JpUtil getArticleCategoryAndNCDic] objectForKey:articleCategories[0]];
+        self.mNavSlideSwitchNC = [[JpData getArticleCategoryAndNCDic] objectForKey:articleCategories[0]];
     }
     return self;
 }
@@ -128,7 +128,7 @@
     NSString *itemNameSel;
     if(indexPath.section == 0){
         itemNameSel = [articleCategories objectAtIndex:indexPath.row];
-        self.mNavSlideSwitchNC = [[JpUtil getArticleCategoryAndNCDic] objectForKey:itemNameSel];
+        self.mNavSlideSwitchNC = [[JpData getArticleCategoryAndNCDic] objectForKey:itemNameSel];
         [self.mm_drawerController setCenterViewController:self.mNavSlideSwitchNC withCloseAnimation:YES completion:nil];
     } else if(indexPath.section == 1) {
         itemNameSel = [samples objectAtIndex:indexPath.row];

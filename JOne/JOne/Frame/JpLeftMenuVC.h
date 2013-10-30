@@ -10,7 +10,7 @@
 
 @interface JpLeftMenuVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) IBOutlet UITableView *tableViewLeft;
+@property (nonatomic, strong) IBOutlet UITableView *mMenuTV;
 @property (nonatomic, strong) IBOutlet UINavigationController *mNavSlideSwitchNC;
 @property (nonatomic, strong) IBOutlet UINavigationController *mIosSampleNC;
 @property (nonatomic, strong) IBOutlet UINavigationController *mJqueryMobileSampleNC;
