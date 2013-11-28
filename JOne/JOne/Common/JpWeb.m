@@ -12,8 +12,10 @@
 #import "JpData.h"
 #import "DateUtil.h"
 #import "StringUtil.h"
+#import "DBManager.h"
+#import "StringUtil.h"
 
-static NSString *const BaseURLString = @"http://192.168.0.102:8080/jp";//@"http://www.ganjianping.com";
+static NSString *const BaseURLString = @"http://www.ganjianping.com";//@"http://www.ganjianping.com"; http://192.168.1.103:8080/jp 
 
 @implementation JpWeb
 
@@ -37,7 +39,7 @@ static NSString *const BaseURLString = @"http://192.168.0.102:8080/jp";//@"http:
 + (void) getBmConfigs:(BOOL)isUpdate
 {
     NSString *url = [NSString stringWithFormat:@"%@/mobile/getBmConfigs", BaseURLString];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPRequestOperationManager *httpReqOpManager = [AFHTTPRequestOperationManager manager];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
     [parameters setObject:@"('AudioUrl','ImageUrl','VideoUrl','FileUrl','MobileTags')" forKey:@"configCds"];
     NSString *lastTime = [JpData getValueUD:KEY_BM_CONFIG_LAST_TIME];
@@ -45,19 +47,27 @@ static NSString *const BaseURLString = @"http://192.168.0.102:8080/jp";//@"http:
         if (isUpdate) [parameters setObject:lastTime forKey:KEY_LAST_TIME];
         NSLog(@"BM_CONFIG_LAST_TIME : %@, %@", lastTime, [DateUtil getDateTimeStrByMilliSecond:[lastTime longLongValue]]);
     }
-    [manager POST:url parameters:parameters
+    [httpReqOpManager POST:url parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSArray *jsonArr = [JpData getJsonArr:responseObject];
               if (jsonArr && [jsonArr count]>0) {
+                  DBManager *dbManager = [DBManager getSharedInstance];
+                  if (!isUpdate) {
+                      [dbManager deleteRecords:TABLE_BM_CONFIG];
+                  }
                   NSString *newLastTime = lastTime;
+                 
                   for (NSDictionary *dic in jsonArr) {
-                      NSString *modifyTime = [dic objectForKey:@"modifyTimestamp"];
+                      NSMutableDictionary *mutableDic= [dic mutableCopy];
+                      NSString *modifyTime = [mutableDic objectForKey:COLUMN_MODIFY_TIMESTAMP];
                       if (!newLastTime || [modifyTime longLongValue] > [newLastTime longLongValue]) {
                           newLastTime = modifyTime;
                       }
+                      [mutableDic removeObjectForKey:COLUMN_QUERY_FILTERS];
+                      [dbManager insertOneRecord:TABLE_BM_CONFIG columnValueDic:mutableDic];
                   }
                   [JpData setValueUD:[StringUtil convertStr:newLastTime] forKey:KEY_BM_CONFIG_LAST_TIME];
-                  NSLog(@"BmConfig Count: %lu,%@", [jsonArr count],newLastTime);
+                  NSLog(@"BmConfig Count: %lu,%@", [jsonArr count], newLastTime);
               }
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
@@ -79,12 +89,20 @@ static NSString *const BaseURLString = @"http://192.168.0.102:8080/jp";//@"http:
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSArray *jsonArr = [JpData getJsonArr:responseObject];
               if (jsonArr && [jsonArr count]>0) {
+                  DBManager *dbManager = [DBManager getSharedInstance];
+                  if (!isUpdate) {
+                      [dbManager deleteRecords:TABLE_CM_ARTICLE];
+                  }
                   NSString *newLastTime = lastTime;
                   for (NSDictionary *dic in jsonArr) {
-                      NSString *modifyTime = [dic objectForKey:@"modifyTimestamp"];
+                      NSMutableDictionary *mutableDic= [dic mutableCopy];
+                      NSString *modifyTime = [dic objectForKey:COLUMN_MODIFY_TIMESTAMP];
                       if (!newLastTime || [modifyTime longLongValue] > [newLastTime longLongValue]) {
                           newLastTime = modifyTime;
                       }
+                      [mutableDic setObject:[StringUtil textToHtml:[dic objectForKey:COLUMN_CONTENT]] forKey:COLUMN_CONTENT];
+                      [mutableDic removeObjectForKey:COLUMN_QUERY_FILTERS];
+                      [dbManager insertOneRecord:TABLE_CM_ARTICLE columnValueDic:mutableDic];
                   }
                   [JpData setValueUD:[StringUtil convertStr:newLastTime] forKey:KEY_CM_ARTICLE_LAST_TIME];
                   NSLog(@"cmArticle Count: %lu,%@", [jsonArr count], newLastTime);
@@ -109,13 +127,22 @@ static NSString *const BaseURLString = @"http://192.168.0.102:8080/jp";//@"http:
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSArray *jsonArr = [JpData getJsonArr:responseObject];
               if (jsonArr && [jsonArr count]>0) {
+                  DBManager *dbManager = [DBManager getSharedInstance];
+                  if (!isUpdate) {
+                      [dbManager deleteRecords:TABLE_CM_PHOTO];
+                  }
                   NSString *newLastTime = lastTime;
                   for (NSDictionary *dic in jsonArr) {
+                      NSMutableDictionary *mutableDic= [dic mutableCopy];
                       NSString *modifyTime = [dic objectForKey:@"modifyTimestamp"];
                       if (!newLastTime || [modifyTime longLongValue] > [newLastTime longLongValue]) {
                           newLastTime = modifyTime;
                       }
+                      [mutableDic removeObjectForKey:COLUMN_QUERY_FILTERS];
+                      [dbManager insertOneRecord:TABLE_CM_PHOTO columnValueDic:mutableDic];
+
                   }
+                  
                   [JpData setValueUD:[StringUtil convertStr:newLastTime] forKey:KEY_CM_PHOTO_LAST_TIME];
                   NSLog(@"cmPhoto Count: %lu,%@", [jsonArr count], newLastTime);
               }
