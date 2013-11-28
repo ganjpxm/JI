@@ -12,7 +12,7 @@
 
 + (NSInteger) getCurMilliseconded;
 
-+ (NSString *) getDateTimeStrByMilliSecond:(long)aMillisecond;
-+ (NSString *) getDateStrByMilliSecond:(long)aMillisecond;
++ (NSString *) getDateTimeStrByMilliSecond:(unsigned long long)aMillisecond;
++ (NSString *) getDateStrByMilliSecond:(unsigned long long)aMillisecond;
 
 @end
