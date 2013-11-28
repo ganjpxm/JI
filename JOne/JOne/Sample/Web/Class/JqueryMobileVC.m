@@ -23,7 +23,7 @@
     [self.navigationController.navigationBar setHidden:YES];
     
     mWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320,568)];
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"JqueryMobile/jqmHome.html" ofType:nil]];
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"cashline/index.html" ofType:nil]];
     NSURLRequest *nsrequest=[NSURLRequest requestWithURL:url];
     [mWebView loadRequest:nsrequest];
     [self.view addSubview:mWebView];

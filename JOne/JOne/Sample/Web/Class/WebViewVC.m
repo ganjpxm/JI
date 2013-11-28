@@ -31,10 +31,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 //    NSString *url=@"http://www.google.com";
-//    NSURL *nsurl=[NSURL URLWithString:url];
+//    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+//    [mWebView loadRequest : urlRequest];
+//    
+//    NSString *html = @"hello <h1>world<h1>";
+//    // @"<script language='javascript'>alert('hello');</script>'"
+//    [mWebView loadHTMLString:html baseURL:nil];
     
-    mWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320,568)];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:@"word" ofType:@"html"];
+    NSData *data = [[NSData alloc]initWithContentsOfFile:path];
+    [mWebView loadData:data MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:nil];
+    
+    mWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, 568)];
     [self.view addSubview:mWebView];
+    
     
     [WebViewJavascriptBridge enableLogging];
     
